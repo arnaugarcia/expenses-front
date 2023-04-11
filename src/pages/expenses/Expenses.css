@@ -1,0 +1,49 @@
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.expenses table,
+.summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.expenses th,
+.expenses td,
+.summary th,
+.summary td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+.expenses th:first-child,
+.summary th:first-child {
+    width: 25%;
+}
+
+.expenses th:nth-child(2),
+.summary th:nth-child(2) {
+    width: 50%;
+}
+
+.expenses th:last-child,
+.summary th:last-child,
+.expenses td:last-child,
+.summary td:last-child {
+    width: 25%;
+    text-align: right;
+}
+
+.expenses tbody tr:hover,
+.summary tbody tr:hover {
+    background-color: var(--tertiary-color);
+}
+
+.summary td:last-child {
+    font-weight: bold;
+}
