@@ -1,8 +1,4 @@
-interface User {
-    name: string;
-    surname: string;
-    login: string;
-}
+import {User} from "./UserModel";
 
 export interface ExpenseModel {
     name: string;

@@ -2,11 +2,13 @@ import './Expenses.css';
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {ExpenseModel} from "./model/ExpensesModel";
+import {UserExpenseSummary} from "./model/ExpensesSummary";
 
 function ExpensesListing() {
 
     const params = useParams();
     const [expenses, setExpenses] = useState<ExpenseModel[]>()
+    const [expensesSummary, setExpensesSummary] = useState<UserExpenseSummary[]>()
     const serverUrl = import.meta.env.VITE_APP_SERVER_URL;
     const groupId = params.groupId;
 
@@ -15,6 +17,11 @@ function ExpensesListing() {
         fetch(`${serverUrl}/api/groups/${groupId}/expenses`)
             .then(response => response.json())
             .then(expenses => setExpenses(expenses))
+            .catch(error => console.error(error));
+
+        fetch(`${serverUrl}/api/groups/${groupId}/summary`)
+            .then(response => response.json())
+            .then(summary => setExpensesSummary(summary))
             .catch(error => console.error(error));
 
     }, []);
@@ -36,7 +43,7 @@ function ExpensesListing() {
                     <tbody>
                     {
                         expenses?.map(expenses => (
-                            <tr>
+                            <tr key={expenses.date}>
                                 <td>{expenses.name}</td>
                                 <td>{expenses.description}</td>
                                 <td>{expenses.amount}</td>
@@ -45,6 +52,29 @@ function ExpensesListing() {
                             </tr>
                         ))
                     }
+                    </tbody>
+                </table>
+            </div>
+            <div className="summary">
+                <h2>Pending payments</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Payer</th>
+                        <th></th>
+                        <th>Payee</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {expensesSummary?.map(summary => (
+                        <tr>
+                            <th>{summary.payer.name} {summary.payer.surname}</th>
+                            <th>➡️</th>
+                            <th>{summary.payee.name} {summary.payee.surname}</th>
+                            <th>{summary.amount}</th>
+                        </tr>
+                    ))}
                     </tbody>
                 </table>
             </div>
