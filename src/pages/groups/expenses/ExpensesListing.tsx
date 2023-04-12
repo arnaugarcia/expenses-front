@@ -1,5 +1,5 @@
 import './Expenses.css';
-function Expenses() {
+function ExpensesListing() {
     return (
         <>
             <div className="expenses">
@@ -54,4 +54,4 @@ function Expenses() {
     )
 }
 
-export default Expenses;
+export default ExpensesListing;
