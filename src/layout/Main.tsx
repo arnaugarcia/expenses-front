@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
-import Expenses from "../pages/expenses/Expenses";
+import {Outlet} from "react-router-dom";
 
 function Main() {
     return (
@@ -11,7 +11,7 @@ function Main() {
                     <h1>Group Expenses</h1>
                 </header>
                 <div className="container">
-                    <Expenses/>
+                    <Outlet />
                 </div>
             </main>
         </>);

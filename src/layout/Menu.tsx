@@ -1,13 +1,13 @@
 import './Menu.css';
+import React from "react";
+import {Link} from "react-router-dom";
 
 function Menu() {
     return (
         <nav>
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Expenses</a></li>
-                <li><a href="#">Budgets</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><Link to="/">Expenses</Link></li>
+                <li><Link to="/groups">Groups</Link></li>
             </ul>
         </nav>);
 }
