@@ -1,0 +1,42 @@
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-row label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-row input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.add-user-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-user-form button:hover {
+    background-color: #3e8e41;
+}
