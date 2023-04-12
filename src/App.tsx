@@ -4,6 +4,7 @@ import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ExpensesListing from "./pages/expenses/ExpensesListing";
 import GroupsListing from "./pages/groups/listing/GroupsListing";
+import {GroupAddFriend} from "./pages/groups/add/AddFriend";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Main />}>
             <Route index element={<GroupsListing />} />
             <Route index path={"/groups"} element={<GroupsListing />} />
+            <Route index path={"/groups/:groupId/add-friend"} element={<GroupAddFriend />} />
             <Route index path={"groups/:groupId/expenses"} element={<ExpensesListing />} />
           </Route>
         </Routes>

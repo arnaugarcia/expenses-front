@@ -1,11 +1,12 @@
 import './Expenses.css';
 import {useNavigate, useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {ExpenseModel} from "./model/ExpensesModel";
 import {UserExpenseSummary} from "./model/ExpensesSummary";
 
 function ExpensesListing() {
 
+    const navigate = useNavigate();
     const params = useParams();
     const [expenses, setExpenses] = useState<ExpenseModel[]>()
     const [expensesSummary, setExpensesSummary] = useState<UserExpenseSummary[]>()
@@ -29,6 +30,9 @@ function ExpensesListing() {
     return (
         <>
             <div className="expenses">
+                <div className="table-header">
+                    <button className="btn btn-primary btn-add-expense" onClick={() => navigate(`/groups/${groupId}/add-friend`)}>Add Friend</button>
+                </div>
                 <h2>Expenses of group {groupId}</h2>
                 <table>
                     <thead>
