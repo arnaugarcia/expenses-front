@@ -7,9 +7,6 @@ function Main() {
         <>
             <Menu/>
             <main>
-                <header>
-                    <h1>Group Expenses</h1>
-                </header>
                 <div className="container">
                     <Outlet />
                 </div>
