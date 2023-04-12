@@ -2,7 +2,7 @@ import './App.css'
 import Main from "./layout/Main";
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ExpensesListing from "./pages/groups/expenses/ExpensesListing";
+import ExpensesListing from "./pages/expenses/ExpensesListing";
 import GroupsListing from "./pages/groups/listing/GroupsListing";
 
 function App() {
