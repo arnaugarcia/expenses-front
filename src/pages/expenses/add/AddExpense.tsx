@@ -70,7 +70,7 @@ export function AddExpense() {
                     <label htmlFor="creatorLogin">Friend:</label>
                     <select name="friend" id="friend" ref={creatorLoginRef} >
                         {friends.map((friend) => (
-                            <option key={friend.login} value={friend.login}>{friend.name} {friend.surname}</option>
+                            <option key={friend.login} value={friend.login}>{friend.name} {friend.surname} ({friend.login})</option>
                         ))}
                     </select>
                 </div>
