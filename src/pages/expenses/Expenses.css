@@ -49,8 +49,8 @@ h1 {
 }
 
 .btn-add-expense {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;

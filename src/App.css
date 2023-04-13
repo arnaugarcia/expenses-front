@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #4B6CC1;
+    --primary-color: #10069f;
     --secondary-color: #F4F4F4;
     --tertiary-color: #E9EBEE;
     --text-color: #333333;
+    --cta-color: #ff0055;
 }
 
 /* Layout */

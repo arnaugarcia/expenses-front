@@ -24,7 +24,7 @@ function GroupsListing() {
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
-                    <th>Actions</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>

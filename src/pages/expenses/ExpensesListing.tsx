@@ -72,8 +72,8 @@ function ExpensesListing() {
                     </tr>
                     </thead>
                     <tbody>
-                    {expensesSummary?.map(summary => (
-                        <tr>
+                    {expensesSummary?.map((summary, index) => (
+                        <tr key={index}>
                             <th>{summary.payer.name} {summary.payer.surname}</th>
                             <th>➡️</th>
                             <th>{summary.payee.name} {summary.payee.surname}</th>
