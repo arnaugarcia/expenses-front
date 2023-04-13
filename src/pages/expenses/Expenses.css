@@ -48,13 +48,6 @@ h1 {
     font-weight: bold;
 }
 
-.table-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
 .btn-add-expense {
     background-color: #007bff;
     border-color: #007bff;
@@ -73,4 +66,12 @@ h1 {
 
 .btn-add-expense:focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.table-header {
+    float: right;
+}
+
+.table-header > button {
+    margin-left: 10px;
 }

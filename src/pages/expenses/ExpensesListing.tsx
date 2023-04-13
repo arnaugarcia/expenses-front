@@ -29,11 +29,11 @@ function ExpensesListing() {
 
     return (
         <>
+            <div className={"table-header"}>
+                <button className="btn btn-primary btn-add-expense" onClick={() => navigate(`/groups/${groupId}/add-friend`)}>Add Friend</button>
+                <button className="btn btn-primary btn-add-expense" onClick={() => navigate(`/groups/${groupId}/expenses/add`)}>Add Expense</button>
+            </div>
             <div className="expenses">
-                <div className="table-header">
-                    <button className="btn btn-primary btn-add-expense" onClick={() => navigate(`/groups/${groupId}/add-friend`)}>Add Friend</button>
-                    <button className="btn btn-primary btn-add-expense" onClick={() => navigate(`/groups/${groupId}/expenses/add`)}>Add Expense</button>
-                </div>
                 <h2>Expenses of group {groupId}</h2>
                 <table>
                     <thead>
