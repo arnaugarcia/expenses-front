@@ -63,7 +63,7 @@ export function AddExpense() {
 
                 <div className="form-row">
                     <label htmlFor="amount">Amount:</label>
-                    <input type="number" id="amount" ref={amountRef} name="amountRef" required/>
+                    <input type="number" id="amount" ref={amountRef} step="0.01" name="amountRef" required/>
                 </div>
 
                 <div className="form-row">
